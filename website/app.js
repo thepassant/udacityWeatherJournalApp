@@ -6,7 +6,7 @@ let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
 
 const init = async () => {
   try {
-    const res = await fetch("http://127.0.0.1:3001/mango"),
+    const res = await fetch("http://127.0.0.1:3001/country-weather"),
       parsedRes = await res.json();
     console.log(parsedRes);
   } catch (err) {
