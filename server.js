@@ -3,7 +3,8 @@ require("dotenv").config();
 
 //import packages
 const express = require("express"),
-  bodyParser = require("body-parser");
+  bodyParser = require("body-parser"),
+  cors = require("cors");
 
 // Setup empty JS object to act as endpoint for all routes
 projectData = {};
@@ -15,6 +16,7 @@ const app = express();
 
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
