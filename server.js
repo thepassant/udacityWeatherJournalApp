@@ -13,6 +13,7 @@ projectData = {};
 
 // Start up an instance of app
 const app = express();
+const weatherRoutes = require("./server/routes/weatherRoutes");
 
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
@@ -20,6 +21,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//Routes
+app.use(weatherRoutes);
 // Cors for cross origin allowance
 
 // Initialize the main project folder
